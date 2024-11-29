@@ -1,0 +1,86 @@
+Attributes in HTML provide additional information about HTML elements. They modify the default behavior of elements or add metadata to them. Attributes are specified within the opening tag and always follow the syntax: 
+
+```html
+<element attribute="value">Content</element>
+```
+
+---
+
+### **Common HTML Attributes**
+
+1. **Global Attributes**: Can be used with any HTML element.
+   - `id`: Uniquely identifies an element.
+   - `class`: Assigns a class name for styling or JavaScript functionality.
+   - `style`: Adds inline CSS.
+   - `title`: Adds extra information (displayed as a tooltip on hover).
+   - `data-*`: Custom data attributes.
+
+2. **Specific Attributes**: Unique to certain HTML elements.
+   - For `<a>` (anchor tag): 
+     - `href`: Specifies the URL of the link.
+     - `target`: Defines where to open the link (`_self`, `_blank`, etc.).
+   - For `<img>`:
+     - `src`: URL of the image.
+     - `alt`: Text alternative for the image.
+   - For `<input>`:
+     - `type`: Defines input type (`text`, `password`, etc.).
+     - `value`: Specifies a default value.
+     - `placeholder`: Provides a hint about what to input.
+
+---
+
+### **Examples**
+
+#### 1. **Basic Global Attributes**
+```html
+<div id="container" class="box" style="color: blue;" title="This is a container">
+  Hover over me to see a tooltip!
+</div>
+```
+
+#### 2. **Attributes for Links**
+```html
+<a href="https://example.com" target="_blank" title="Visit Example">Go to Example</a>
+```
+
+#### 3. **Attributes for Images**
+```html
+<img src="image.jpg" alt="A beautiful view" title="Nature at its best">
+```
+
+#### 4. **Attributes for Inputs**
+```html
+<input type="text" id="username" name="username" placeholder="Enter your name" required>
+```
+
+#### 5. **Data Attributes**
+```html
+<button data-user-id="12345" data-role="admin">View Profile</button>
+```
+
+---
+
+### **Key Points**
+1. **Syntax**:
+   - Always in `name="value"` format.
+   - Attribute values must be quoted (double or single quotes).
+
+2. **Multiple Attributes**:
+   - You can add multiple attributes in a single tag.
+   ```html
+   <button id="submitBtn" class="btn primary" type="submit">Submit</button>
+   ```
+
+3. **Boolean Attributes**:
+   - Some attributes are true/false and don't require a value.
+   ```html
+   <input type="checkbox" checked>
+   ```
+
+4. **Custom Data Attributes**:
+   - Start with `data-` and can be accessed in JavaScript for custom logic.
+   ```html
+   <div data-product-id="5678" data-stock="20"></div>
+   ```
+
+Let me know if you'd like examples for advanced attributes or how to use them in JavaScript!
