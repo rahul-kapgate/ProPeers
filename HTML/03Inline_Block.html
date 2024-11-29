@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block vs Inline</title>
+  <style>
+    .block {
+      display: block;
+      width: 200px;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: lightblue;
+    }
+
+    .inline {
+      display: inline;
+      margin: 5px;
+      padding: 5px;
+      background-color: lightgreen;
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      padding: 5px;
+      background-color: lightcoral;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 50px; /* Aligns text vertically */
+    }
+  </style>
+</head>
+<body>
+  <h1>Block vs Inline Elements</h1>
+
+  <!-- Block element -->
+  <div class="block">I am a Block Element</div>
+   <div class="block">I am a Block Element</div>
+
+  <!-- Inline elements -->
+  <span class="inline">I</span>
+  <span class="inline">am</span>
+  <span class="inline">an</span>
+  <span class="inline">Inline</span>
+  <span class="inline">Element</span>
+
+  <br><br>
+
+  <!-- Inline-block elements -->
+  <div class="inline-block">1</div>
+  <div class="inline-block">2</div>
+  <div class="inline-block">3</div>
+</body>
+</html>
