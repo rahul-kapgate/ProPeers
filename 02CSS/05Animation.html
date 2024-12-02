@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Bouncing Ball Animation */
+    .ball {
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      border-radius: 50%;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-150px);
+      }
+    }
+
+    /* Color Changing Box */
+    .color-box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin-top: 20px;
+      animation: color-change 3s infinite alternate;
+    }
+
+    @keyframes color-change {
+      0% {
+        background-color: red;
+      }
+      50% {
+        background-color: yellow;
+      }
+      100% {
+        background-color: green;
+      }
+    }
+
+    /* Spinning Animation */
+    .spinner {
+      width: 80px;
+      height: 80px;
+      border: 10px solid #ccc;
+      border-top-color: #3498db;
+      border-radius: 50%;
+      margin-top: 20px;
+      animation: spin 1.5s infinite linear;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Animations Demo</h1>
+  <div class="ball"></div>
+  <div class="color-box"></div>
+  <div class="spinner"></div>
+</body>
+</html>

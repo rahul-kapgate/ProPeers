@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Sizing Examples</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    .example {
+      margin-bottom: 40px;
+    }
+
+    .example img {
+      border: 5px solid darkblue;
+    }
+
+    .example .box {
+      border: 5px solid darkblue;
+    }
+
+    /* Intrinsic Sizing */
+    .intrinsic img {
+      max-width: 100%;
+    }
+
+    /* Extrinsic Sizing */
+    .extrinsic .box {
+      width: 200px;
+      height: 100px;
+    }
+
+    /* Percentage-Based Sizing */
+    .percent .box {
+      width: 50%;
+      margin: 10%;
+      padding: 10%;
+    }
+
+    /* Min- and Max-Sizing */
+    .min-max .box {
+      min-height: 100px;
+      width: 200px;
+      max-width: 300px;
+    }
+
+    /* Viewport Units */
+    .viewport .box {
+      width: 20vw;
+      height: 20vh;
+      font-size: 10vh;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="example intrinsic">
+    <h2>Intrinsic Sizing</h2>
+    <img src="https://mdn.github.io/shared-assets/images/examples/big-star.png" alt="Star">
+  </div>
+
+  <div class="example extrinsic">
+    <h2>Extrinsic Sizing</h2>
+    <div class="box">Fixed Width and Height</div>
+  </div>
+
+  <div class="example percent">
+    <h2>Percentage Sizing</h2>
+    <div class="box">10% margin and padding</div>
+  </div>
+
+  <div class="example min-max">
+    <h2>Min and Max Sizing</h2>
+    <div class="box">Min-height: 100px, Max-width: 300px</div>
+  </div>
+
+  <div class="example viewport">
+    <h2>Viewport Units</h2>
+    <div class="box">A</div>
+  </div>
+</body>
+</html>
+
+
+<!-- ### Summary: Sizing Items in CSS
+
+Understanding how to size elements in CSS is crucial for creating effective and responsive designs. Below are the key concepts discussed in this lesson:
+
+---
+
+### **1. Intrinsic (Natural) Size**
+- **Images:** Automatically sized based on their intrinsic dimensions unless explicitly styled.
+- **Empty `<div>`:** No height or size by default; its size depends on content and CSS properties applied to it.
+- **Content Dependency:** A `<div>` with text inside will size itself to fit the content (intrinsic sizing).
+
+---
+
+### **2. Extrinsic Size (Specific Size)**
+- **Fixed Sizes:** You can set explicit `width` and `height` values for elements. 
+- **Overflow Issue:** Be cautious when setting a fixed height as it might lead to content overflow.
+  
+```css
+.box {
+  height: 100px;
+  width: 200px;
+}
+```
+
+---
+
+### **3. Percentage-Based Sizing**
+- **Percentage Width:** Calculated as a percentage of the parent container's width.
+- **Margins and Padding:** Percentages are always relative to the containing block's width, not height, leading to consistent spacing on all sides.
+
+```css
+.box {
+  width: 50%; /* 50% of parent container's width */
+  margin: 10%; /* 10% of parent container's width */
+}
+```
+
+---
+
+### **4. Min- and Max-Sizing**
+- **`min-height` / `min-width`:** Ensures elements are not smaller than a defined size.
+- **`max-height` / `max-width`:** Prevents elements from exceeding a specified size.
+- Useful for responsive designs and managing content overflow gracefully.
+
+---
+
+### **5. Viewport Units**
+- **Units:**
+  - `1vh`: 1% of viewport height.
+  - `1vw`: 1% of viewport width.
+- Ideal for creating elements sized relative to the viewport, like fullscreen sections (`100vh`).
+
+```css
+.box {
+  width: 20vw;
+  height: 20vh;
+  font-size: 10vh;
+}
+```
+
+---
+
+### **6. Responsive Images**
+- Use `max-width: 100%` for responsive images to prevent them from exceeding their container's width.
+- Avoid scaling down large images with CSS; resize them appropriately before using to optimize performance.
+
+---
+
+### **Key Notes**
+- Use percentages with care to avoid unexpected results with padding and margin.
+- Apply `min-` and `max-` properties for flexible designs.
+- Viewport units are powerful for responsive layouts, but test on various devices.
+- Efficient image handling ensures better site performance.
+
+---
+
+### **Next Steps**
+To solidify your understanding, practice:
+- Setting intrinsic and extrinsic sizes.
+- Using viewport units in responsive designs.
+- Creating layouts that handle content overflow gracefully.
+
+### **Further Reading**
+- Explore [CSS Layout Techniques](https://developer.mozilla.org/) to build on these fundamentals. -->

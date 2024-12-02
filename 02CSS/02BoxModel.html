@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=W, initial-scale=1.0">
+    <link rel="stylesheet" href="02Box.css">
+    <title>Box model</title>
+</head>
+<body>
+
+    <h1 class="box">Box 1</h1>
+    <h1 class="box-one">Box 2</h1>
+    
+</body>
+</html>
+
+<!-- # CSS Box Model Overview
+
+The CSS Box Model is a fundamental concept in web design that describes how every HTML element is represented as a rectangular box. It consists of multiple layers that define the size and spacing of an element. Understanding the box model is crucial for layout design and controlling spacing in CSS.
+
+---
+
+### **Parts of the Box Model**
+
+1. **Content Box**  
+   - Contains the actual content (text, images, etc.).
+   - Sized using properties like `width` and `height`.
+
+2. **Padding Box**  
+   - Space between the content and the border.
+   - Sized using the `padding` property.
+
+3. **Border Box**  
+   - Encapsulates the content and padding.
+   - Sized using the `border` property.
+
+4. **Margin Box**  
+   - Space outside the border, creating distance between elements.
+   - Sized using the `margin` property.
+
+---
+
+### **Standard vs. Alternative Box Model**
+
+1. **Standard Box Model**  
+   - `width` and `height` apply to the **content box** only.
+   - Total size = content + padding + border.
+
+   Example:
+   ```css
+   .box {
+       width: 350px;
+       height: 150px;
+       padding: 25px;
+       border: 5px solid black;
+   }
+   ```
+
+   **Total Size:**  
+   - Width: `350 + 25*2 + 5*2 = 410px`  
+   - Height: `150 + 25*2 + 5*2 = 210px`
+
+2. **Alternative Box Model**  
+   - `width` and `height` include content, padding, and border.
+   - Use `box-sizing: border-box;` to enable.
+
+   Example:
+   ```css
+   .box {
+       box-sizing: border-box;
+       width: 350px;
+       height: 150px;
+       padding: 25px;
+       border: 5px solid black;
+   }
+   ```
+
+   **Total Size:**  
+   - Width: `350px`  
+   - Height: `150px`
+
+   **Global Application:**
+   ```css
+   html {
+       box-sizing: border-box;
+   }
+
+   *, *::before, *::after {
+       box-sizing: inherit;
+   }
+   ```
+
+---
+
+### **Display Types**
+
+#### **Outer Display Types**
+- **Block**  
+  - Starts on a new line.  
+  - Width defaults to fill the parent container.  
+  - Examples: `<div>`, `<p>`, `<h1>`.
+
+- **Inline**  
+  - Does not start on a new line.  
+  - Ignores `width` and `height`.  
+  - Examples: `<span>`, `<a>`, `<em>`.
+
+#### **Inner Display Types**
+- Can change the layout of child elements.
+- Examples:
+  - `display: flex` (Flexbox)
+  - `display: grid` (CSS Grid)
+
+#### **Special Display Value**
+- **Inline-block**  
+  - Combines properties of inline and block.  
+  - Respects `width` and `height` but remains inline.
+
+---
+
+### **Working with Margins, Padding, and Borders**
+
+1. **Margins**  
+   - Create space around elements.
+   - Can collapse with adjacent margins (e.g., two positive margins combine into one).
+
+2. **Padding**  
+   - Creates space inside the element between content and border.
+   - Cannot have negative values.
+
+3. **Borders**  
+   - Separate padding from margins.
+   - Style using `border-width`, `border-style`, and `border-color`.
+
+---
+
+### **Tips and Tools**
+
+- Use browser DevTools to inspect the box model visually.
+- Adjust margin, padding, and border values to control spacing.
+- Test layout changes with `display: inline-block` or other display properties.
+
+By mastering the CSS Box Model, you can efficiently design and align elements for precise layouts! -->

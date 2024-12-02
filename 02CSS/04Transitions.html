@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transitions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Example 1: Button Hover Transition */
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2ecc71;
+      transform: scale(1.1);
+    }
+
+    /* Example 2: Box Hover Transition */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: width 0.5s ease, background-color 1s ease;
+      margin-top: 20px;
+    }
+
+    .box:hover {
+      width: 200px;
+      background-color: blue;
+    }
+
+    /* Example 3: Delayed Transition */
+    .delayed-box {
+      width: 150px;
+      height: 150px;
+      background-color: purple;
+      margin-top: 20px;
+      transition: background-color 0.5s ease-in 0.2s;
+    }
+
+    .delayed-box:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transitions Demo</h1>
+  <button>Hover Me!</button>
+  <div class="box"></div>
+  <div class="delayed-box"></div>
+</body>
+</html>
+
+
+
+<!-- ### CSS Transitions: A Quick Overview
+
+CSS transitions allow you to smoothly change property values over time, enhancing the visual appeal of your web pages. Here's a breakdown:
+
+---
+
+### **1. How Transitions Work**
+Transitions enable gradual changes for CSS properties rather than abrupt jumps. For example, transitioning the color of a button when it's hovered over.
+
+```css
+selector {
+  transition: property duration timing-function delay;
+}
+```
+
+**Properties:**
+- `property`: The CSS property to animate (e.g., `background-color`, `width`, etc.). Use `all` for all animatable properties.
+- `duration`: Time it takes for the transition to complete (e.g., `0.5s`, `2s`).
+- `timing-function`: Defines the speed curve (`ease`, `linear`, `ease-in`, `ease-out`, etc.).
+- `delay`: Time to wait before starting the transition (e.g., `1s`).
+
+---
+
+### **2. Example: Button Hover Transition**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transitions</title>
+  <style>
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2ecc71;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <button>Hover Me!</button>
+</body>
+</html>
+```
+
+### Key Points:
+1. The `background-color` transitions smoothly from blue to green.
+2. The button scales slightly larger when hovered over, giving a "pop" effect.
+
+---
+
+### **3. Transition on Multiple Properties**
+You can animate multiple properties by separating them with commas.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 0.5s ease, background-color 1s ease;
+}
+
+div:hover {
+  width: 200px;
+  background-color: blue;
+}
+```
+
+---
+
+### **4. `transition` Shorthand**
+Instead of specifying individual properties, you can use `transition` shorthand:
+```css
+div {
+  transition: all 0.5s ease-in-out;
+}
+```
+
+---
+
+### **5. Delayed Transitions**
+Add a delay to create staggered effects:
+```css
+div {
+  background-color: purple;
+  transition: background-color 0.5s ease-in 0.2s;
+}
+```
+
+---
+
+### **6. Non-Animatable Properties**
+Not all CSS properties can be transitioned (e.g., `display`, `position`). Transition works only on animatable properties like `opacity`, `color`, `width`, etc.
+
+---
+
+### **Summary**
+CSS transitions are simple yet powerful for creating polished user interactions. Use them sparingly to avoid overwhelming the user, and pair them with clear, functional design goals. -->
